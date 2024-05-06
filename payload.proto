@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package benchmark;
+
+import "google/protobuf/timestamp.proto";
+
+message Payload {
+  int32 id = 1;
+  repeated User users = 2;
+  google.protobuf.Timestamp sent_at = 3;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  google.protobuf.Timestamp registered_at = 4;
+}
